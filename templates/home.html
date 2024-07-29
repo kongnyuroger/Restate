@@ -1,0 +1,92 @@
+{%extends 'base.html'%}
+
+{%block title%}home{%endblock%}
+
+{%block content%}
+    <section class="intro">
+        <div class="intro_contain">
+            <h1 class="intro_header">Search Your Next Home</h1>
+            <p>Find new & featured property located in your local city</p>
+            <form  method="get" action="{{ url_for('search_results') }}" class="intro_form">
+                <div class="intro_form_box">
+                    <label for="location">city/street</label>
+                    <input type="text" name="location" id="location" placeholder="Location">
+                </div>
+                <div class="intro_form_box">
+                    <label for="type">Property Type:</label>
+                    <select name="type" id="type" required>
+                        <option value="Family House">Family House</option>
+                        <option value="House & Villa">House & Villa</option>
+                        <option value="Apartment">apartment</option>
+                        <option value="Office & Studio">Office & Studio</option>
+                    </select>
+                </div>
+                <div class="intro_form_box">
+                    <label for="price-range">Price Range</label>
+                    <input type="range" name="price-range" id="price-range" placeholder="Price Range">
+                </div>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>   
+    </section>
+    <section class="featured-properties">
+        <header>
+            <h1>Featured Property Types</h1>
+            <p>Find All Type of Property</p>
+        </header>
+        <div class="contain">
+            <div class="contain_box one">
+                <img src="{{url_for('static',filename='images/homeIcon1.png')}}" alt="">
+                <h4>Family House</h4>
+                <p>122 properties</p>
+            </div>
+            <div class="contain_box two">
+                <img src="{{url_for('static',filename='images/homeIcon5.png')}}" alt="">
+                <h4>House & Villa</h4>
+                <p>155 properties</p>
+            </div>
+            <div class="contain_box three">
+                <img src="{{url_for('static',filename='images/homeIcon4.png')}}" alt="">
+                <h4>Apartment</h4>
+                <p>300 properties</p>
+            </div>
+            <div class="contain_box four">
+                <img src="{{url_for('static',filename='images/homeIcon3.png')}}" alt="">
+                <h4>Office & Studio</h4>
+                <p>80 properties</p>
+            </div>
+            <div class="contain_box five">
+                <img src="{{url_for('static',filename='images/homeIcon2.png')}}" alt="">
+                <h4>Villa & condo</h4>
+                <p>122 properties</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="properties-locations">      
+        <header>
+            <h1>Explore By Location</h1>
+            <p>Lorem Ipsum is simply duthe 1500s, when an unknown printer took a galley of type</p>
+        </header>
+        <div class="content">
+            <div id="one" class="location-box">
+                <h3>Yaounde</h3>
+            </div>
+            <div id="two" class="location-box">
+                <h3>Buea</h3>
+            </div>
+            <div id="three" class="location-box">
+                <h3>Garoua</h3>
+            </div>
+            <div id="four" class="location-box">
+                <h3>New York</h3>
+            </div>
+            <div id="five" class="location-box">
+                <h3>Bamenda</h3>
+            </div>
+            <div id="six" class="location-box">
+                <h3>Paris</h3>
+            </div>
+        </div>
+    </section>
+{%endblock%}

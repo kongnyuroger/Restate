@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9901abbb9f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/base-styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/homePage-style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/forms.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/blog.css') }}">
+    {%block slider_links%}
+    {%endblock%}
+    
+    
+    <title>{% block title%} Rstate {%endblock%}</title>
+</head>
+<body>
+    <nav>
+        <h2 class="nav_logo"><i class="fa-solid fa-house-flag"></i>Restate</h2>
+        <ul class="nav_links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
+            <li><a href="{{url_for('services')}}">Services</a></li>
+            <li><a href="{{url_for('show_properties')}}">Blog</a></li>
+            <li><a href="">Pricing</a></li>
+            {% if current_user.is_authenticated %}
+            <li><a href="{{url_for('dashboard')}}" >Dash</a></li>
+            {%endif%}
+        </ul>
+        <div class="nav_right">
+            
+            
+                {% if current_user.is_authenticated %}
+                <a href="{{url_for('logout')}}"> <button><i class="fa-solid fa-right-to-bracket"></i> SignOut</button></a> 
+                {%else%} 
+                <a href="{{url_for('login')}}"> <button><i class="fa-solid fa-right-to-bracket"></i>SignIN</button></a> 
+                {%endif%}
+        </div>
+    </nav>
+    {%block content%}
+    
+    {%endblock%}
+
+    <div class="footer-container">
+        <div class="contact">
+            <div class="contact_text">
+                <h1>Do you have Questions?</h1>
+                we'll help you to grow your career and grouth
+            </div>
+            <button>Contact Us Today</button>
+        </div>
+        <footer >
+            <div class="sec1">
+                <h2 class="nav_logo"><i class="fa-solid fa-house-flag"></i>RentUp <br>
+                    Do You Need Help With Anything?
+                </h2>
+                <p>Receive updates, hot deals, tutorials, discount sent straight to your inbox every month</p>
+                <input type="text" placeholder="Email Address">
+                <button>Subscribe</button>
+            </div>
+
+            <div class="sec2">
+                <h3>LAYOUTS</h3>
+                <ul>
+                    <li>Home Page</li>
+                    <li>About Page</li>
+                    <li>Services Page</li>
+                    <li>Contact Page</li>
+                    <li>Property Page</li>
+                    <li>Single Blog</li>
+                </ul>
+            </div>
+
+            <div class="sec3">
+                <h3>ALL SECTIONS</h3>
+                <ul>
+                    <li>Headers</li>
+                    <li>Features</li>
+                    <li>Attractive</li>
+                    <li>Testimonials</li>
+                    <li>Videos</li>
+                    <li>Footers</li>
+                </ul>
+            </div>
+
+            <div class="sec4">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>pricing</li>
+                    <li>Affiliation</li>
+                    <li>Login</li>
+                    <li>changelog</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

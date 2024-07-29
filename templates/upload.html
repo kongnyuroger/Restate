@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+
+{%block title%}Profile{%endblock%}
+
+{%block content%}
+<section class="intro">
+    
+    <form action="{{url_for('upload')}}" method="post"  enctype="multipart/form-data" class="upload-form">
+        <h2>Uploade property</h2>
+        
+        <label for="name">Property Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <div class="options-input">
+            <label for="type">Property Type:</label>
+            <select name="type" id="type" required>
+                <option value="Family House">Family House</option>
+                <option value="House & Villa">House & Villa</option>
+                <option value="Apartment">apartment</option>
+                <option value="Office & Studio">Office & Studio</option>
+            </select>
+
+            <label for="status">Status:</label>
+            <select name="status" id="status" required>
+                <option value="For sale">For Sale</option>
+                <option value="For Rent">For Rent</option>
+            </select></div>
+
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" required>
+
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location">
+
+
+        <input type="file" name="files" id="files" multiple required>
+
+        <label for="description">Description</label>
+        <textarea  name="description" id="description"></textarea>
+        
+        <label for="submit"></label>
+        <input class="submit" type="submit" value="Upload">
+    </form>
+</section>
+
+{%endblock%}

@@ -1,0 +1,165 @@
+.intro
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/homeBG2.jpg') ;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.intro_header
+{
+    text-align: center;
+    font-size: 45px;
+}
+.intro_contain p
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.intro_form
+{
+    display: flex;
+    background-color: white;
+    
+}
+.intro_form_box
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-right: 0.5px solid rgba(0, 0, 0, 0.256);
+    padding: 10px 20px;
+}
+.intro_form_box label
+{
+    font-size: 13px;
+    opacity: 0.5;
+}
+.intro_form_box input
+{
+    padding: 5px;
+    opacity: 1;
+    font-size: 16px;
+}
+.intro_form_box select
+{
+    padding: 5px;
+    font-size: 16px;
+}
+.featured-properties .contain
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.3rem
+}
+.featured-properties .contain_box
+{
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+.featured-properties .contain_box img
+{
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 100%;
+}
+.featured-properties .contain_box p
+{
+    opacity: 0.5;
+}
+.featured-properties .one img
+{
+    background-color: rgba(220, 224, 19, 0.178);
+}
+.featured-properties .two img
+{
+    background-color: rgba(152, 19, 224, 0.178);
+}
+.featured-properties .three img
+{
+    background-color: rgba(53, 224, 19, 0.178);
+}
+.featured-properties .four img
+{
+    background-color: rgba(19, 26, 224, 0.178);
+}
+.featured-properties .five img
+{
+    background-color: rgba(220, 224, 19, 0.178);
+}
+
+.content
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.content #one
+{
+    background: url('../images/Yaounde.jpeg');
+}
+.content #two
+{
+    background: url('../images/Buea.jpeg');
+}
+.content #three
+{
+    background: url('../images/Garoua.jpeg');
+}
+.content #four
+{
+    background: url('../images/New-york.jpeg');
+}
+.content #five
+{
+    background: url('../images/Bamenda.jpeg');
+}
+.content #six
+{
+    background: url('../images/Paris.jpeg');
+}
+.location-box
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+    width: 320px;
+    margin-bottom: 2rem;
+    background: url('../images/Yaounde.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.location-box h3
+{
+    background-color: rgba(0, 0, 0, 0.326);
+    color: white;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.about-content
+{
+    display: flex;
+    gap: 1rem;
+}
+.about-content p
+{
+    line-height: 30px;
+}

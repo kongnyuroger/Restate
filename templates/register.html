@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{%block title%}login{%endblock%}
+
+{%block content%}
+<section class="auth-pages">
+    <div class="form_container">
+        
+        <form class="auth-form" action="{{url_for('register')}}" method="post">
+            <h1>Register</h1>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+            <label for="password">Email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="genre">Password</label>
+            <input type="password" name="password" id="password" required>
+            <div class="status-box">
+                <label for="is_agent">Agent:</label>
+                <input type="checkbox" id="is_agent" name="is_agent">
+            </div>
+            <button type="submit">Submit</button>
+            <a href="{{url_for('login')}}">I have an acount</a>
+        </form>
+    </div>
+</section>
+{%endblock%}

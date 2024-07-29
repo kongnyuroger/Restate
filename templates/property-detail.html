@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{%block title%}detail{%endblock%}
+{%block slider_links%}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{%endblock%}
+{%block content%}
+
+<section class="container">
+    
+
+    <div id="propertyCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        {% for image in property.images %}
+        <div class="carousel-item {% if loop.first %}active{% endif %}">
+          <img src="{{ url_for('uploaded_file', filename=image.filename) }}" class="d-block w-100" alt="{{ property.name }}">
+        </div>
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#propertyCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#propertyCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <br>
+
+    <h1>{{ property.name }}</h1>
+    <p>{{ property.description }}</p>
+    <p>Status: {{ property.status }}</p>
+    <a href="{{ url_for('show_properties') }}">Back to Properties</a>
+  </section>
+  {%endblock%}

@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{%block title%}Profile{%endblock%}
+
+{%block content%}
+<section class="blog-intro">
+  <div class="intro-intro_contain">
+      <p class="intro-header">About</p>
+      <h1>About Us - Who are We?</h1>  
+  </div>   
+</section>
+
+<section class="about-content">
+     <div class="text-box">
+            <h2>Our Agency Story</h2>
+            <p>check out our company story and work process </p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>  
+     </div>
+     <img src="{{url_for('static', filename='images/about.jpg')}}" alt="" width="500">
+
+</section>
+{%endblock%}

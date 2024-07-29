@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+
+{%block title%}login{%endblock%}
+
+{%block content%}
+<section class="auth-pages">
+    <div class="form_container">
+        <form class="auth-form" action="{{url_for('login')}}" method="post">
+            <h1>Log In </h1>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <button type="submit">Submit</button>
+            <a href="{{url_for('register')}}">create an acount</a>
+        </form>
+    </div>
+</section>
+{%endblock%}

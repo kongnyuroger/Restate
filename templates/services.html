@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+
+{%block title%}Profile{%endblock%}
+
+{%block content%}
+<section class="blog-intro">
+  <div class="intro-intro_contain">
+      <p class="intro-header">services</p>
+      <h1>Services - All Services</h1>  
+  </div>   
+</section>
+
+<section class="featured-properties">
+    <header>
+        <h1>Featured Property Types</h1>
+        <p>Find All Type of Property</p>
+    </header>
+    <div class="contain">
+        <div class="contain_box one">
+            <img src="{{url_for('static',filename='images/homeIcon1.png')}}" alt="">
+            <h4>Family House</h4>
+            <p>122 properties</p>
+        </div>
+        <div class="contain_box two">
+            <img src="{{url_for('static',filename='images/homeIcon5.png')}}" alt="">
+            <h4>House & Villa</h4>
+            <p>155 properties</p>
+        </div>
+        <div class="contain_box three">
+            <img src="{{url_for('static',filename='images/homeIcon4.png')}}" alt="">
+            <h4>Apartment</h4>
+            <p>300 properties</p>
+        </div>
+        <div class="contain_box four">
+            <img src="{{url_for('static',filename='images/homeIcon3.png')}}" alt="">
+            <h4>Office & Studio</h4>
+            <p>80 properties</p>
+        </div>
+        <div class="contain_box five">
+            <img src="{{url_for('static',filename='images/homeIcon2.png')}}" alt="">
+            <h4>Villa & condo</h4>
+            <p>122 properties</p>
+        </div>
+    </div>
+</section>
+{%endblock%}

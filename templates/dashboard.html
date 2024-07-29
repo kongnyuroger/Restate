@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+
+{%block titel%}Dash{%endblock%}
+
+{%block content%}
+<section>
+    {%if status == True%}
+        <a href="{{url_for('upload')}}"><button class="upload-button"><i class="fa-solid fa-upload"></i></button></a>
+    {%endif%}
+        <div class="properties">
+            {% for property in user.properties %}
+            <div class="card">
+                <img src="{{ url_for('uploaded_file', filename=property.images[0].filename) }}" alt="{{ property.name }}" width="335">
+                <div class="card_status">
+                    <span>{{ property.status }}</span>
+                    <form method="post" action="{{ url_for('add_to_dashboard', property_id=property.id) }}">
+                        <button type="submit"><i class="fa-solid fa-heart"></i></button>
+                    </form>
+                </div>
+
+                <div class="card_info">
+                    <h3>{{ property.name }}</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> {{ property.location }}.</hp>        
+                    <a href="{{ url_for('property_details', property_id=property.id) }}"></a>
+                </div>
+
+                <div class="card_footer">
+                    <button>${{property.price}}</button>
+                    <h4>{{property.type}}</h4>
+                </div>
+
+               
+            </div>
+            
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('show_properties') }}">Back to Properties</a>
+    </section>
+{%endblock%}

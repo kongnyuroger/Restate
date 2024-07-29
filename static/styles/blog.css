@@ -1,0 +1,104 @@
+.blog-intro
+{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(223, 23, 23, 0.361), rgba(236, 16, 16, 0.361)),
+    url('../images/covee-img2.jpg');
+    height: 80vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.intro-intro_contain
+{
+    color: white;
+    text-align: left;    
+}
+.blog-contain
+{
+    margin-top: 10px;
+}
+.properties
+{
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.card
+{
+    position: relative;
+    width: 335px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+.card img
+{
+    width: 335px;
+    height: 300px;
+    object-fit: cover;
+}
+.card a
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    
+    opacity: 0.5;
+}
+
+.card_status
+{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding:20px;
+    margin: 0;
+}
+.card_status span
+{
+    background-color: rgba(255, 0, 0, 0.151);
+    font-size: 18px;
+    height: fit-content;
+    padding: 3px 10px;
+    color: red;
+}
+.card_status button
+{
+    background-color: white;
+    color: gray;
+    font-size: medium;
+    padding: 0px;
+}
+.card_info
+{
+    padding: 0px 20px;
+    
+}
+.card_info p
+{
+    opacity: 0.5;
+}
+
+.card_footer
+{
+    padding: 5px 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 27px;
+   
+
+}
+.card_footer button
+{
+    cursor: auto;
+    border-radius: 30px;
+    font-size: 20px;
+}
